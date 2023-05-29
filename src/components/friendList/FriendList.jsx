@@ -17,7 +17,7 @@ const FriendList = ({friends}) => {
     )
 }
 
-FriendList.prototype = {
+FriendList.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.shape({
       isOnline: PropTypes.bool,

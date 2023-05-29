@@ -26,12 +26,13 @@ const TransactionHistory = ({ items }) => {
     );
 }
 
-TransactionHistory.prototype = {
+TransactionHistory.propTypes = {
   items: PropTypes.arrayOf(
-    PropTypes.shape({
-      type: PropTypes.string,
-      amount: PropTypes.string,
-      currency: PropTypes.string,
+      PropTypes.shape({
+        id: PropTypes.string,
+        type: PropTypes.string,
+        amount: PropTypes.string,
+        currency: PropTypes.string,
     })
   ).isRequired,
 };
