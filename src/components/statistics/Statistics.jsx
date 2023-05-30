@@ -9,10 +9,10 @@ const randomRgb = () => {
   return `rgb(${r},${g},${b})`;
 };
 
-const Statistics = ({ data })  => {
+const Statistics = ({ title, data })  => {
     return (
         <section className={css.statistics}>
-            <h2 className={css.title}>Upload stats</h2>
+        {title && <h2 className={css.title}>{title}</h2>}
 
             <ul className={css.title}>
                 {data.map(item => (
@@ -32,6 +32,7 @@ const Statistics = ({ data })  => {
 
 
 Statistics.propTypes = {
+    title: PropTypes.string,
     data: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
